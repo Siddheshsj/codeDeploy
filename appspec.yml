@@ -2,6 +2,6 @@ version: 0.0
 os: linux
 files:
   - source: /index.html
-    destination: /home/ec2-user/django/edge/
+    destination: /home/ubuntu/django/edge/
 
 
