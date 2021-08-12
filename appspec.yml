@@ -2,6 +2,14 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/html/
-
+    destination: /home/ubuntu/django/edge/
+hooks:
+  BeforeInstall:
+    - location: scripts/start_server
+      timeout: 300
+      runas: ubuntu
+  ApplicationStop:
+    - location: scripts/stop_server
+      timeout: 300
+      runas: ubuntu
 
